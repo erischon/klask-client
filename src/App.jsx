@@ -1,9 +1,20 @@
-function App() {
-  return (
-    <>
-      <h1>Klask</h1>
-    </>
-  );
-}
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-export default App;
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <h1>home</h1>,
+  },
+  {
+    path: "/about",
+    element: (
+      <div>
+        <h2>about page</h2>
+      </div>
+    ),
+  },
+]);
+
+export default function App() {
+  return <RouterProvider router={router} />;
+}
